@@ -132,3 +132,21 @@ After any code changes:
 2. Verify no build errors or warnings introduced
 3. Check that all submodules remain properly initialized
 4. Ensure no sensitive files are staged for commit
+
+### Build Without Apple Developer Certificate
+For development builds without code signing:
+```bash
+xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Standard Release)" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build
+```
+
+**Verified Build Results (2025-09-25):**
+- ✅ Universal binary (x86_64 + arm64)
+- ✅ Complete app bundle with frameworks and XPC services
+- ✅ All submodules properly integrated
+- ✅ No compilation errors
+- ✅ Build artifacts in: `Build Results/Release/Textual.app`
+
+**System Requirements Confirmed:**
+- macOS with Xcode 26.0.1+
+- Git with submodule support
+- No Apple Developer certificate required for development builds
