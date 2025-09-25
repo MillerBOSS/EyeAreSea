@@ -57,4 +57,4 @@ jobs:
             5. Be mindful this is an IRC client with networking and UI components
 
           claude_args: |
-            --allow-tools bash,git,xcodebuild
+            --allowed-tools bash,git,xcodebuild
