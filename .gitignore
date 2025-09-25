@@ -16,3 +16,55 @@ Sources/App/Resources/Scripting/Script Files/Textual Extras Installer/Installati
 Sources/App/Resources/Scripting/Script Files/Textual Extras Installer/Packages/MACAPPSTORE/*
 Sources/App/Resources/Scripting/Script Files/Textual Extras Installer/Packages/STANDALONE/*
 !/Configurations/Build
+
+# Security & Privacy
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+.env
+.env.*
+*.secrets
+*secret*
+*password*
+*token*
+*api-key*
+*.keychain*
+
+# IDE & Editor Security
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Build Artifacts & Sensitive Data
+DerivedData/
+*.dSYM.zip
+*.dSYM
+*.ipa
+*.app
+.Trash/
+Carthage/Checkouts/
+Pods/
+
+# SSH & Git
+.ssh/
+.git-credentials
+.netrc
+
+# System & Process Files
+.localized
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Claude/AI specific
+.claude-history
+.anthropic

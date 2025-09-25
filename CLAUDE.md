@@ -74,3 +74,61 @@ The project uses an extensive .xcconfig system for build configuration:
 - Supports scripts in AppleScript and other languages
 - CSS/HTML/JavaScript style customization
 - Documentation available at help.codeux.com for writing plugins and scripts
+
+## Claude Code Integration
+
+### Required System Tools
+Claude Code requires these tools to work effectively with this project:
+
+#### Essential Build Tools
+- **Xcode**: Full Xcode installation (currently 26.0.1) with command line tools
+- **xcodebuild**: Used for building all targets and schemes
+- **git**: For version control and submodule management
+- **bash**: For build scripts and general system operations
+
+#### Available Build Schemes (from `xcodebuild -list -workspace Textual.xcworkspace`)
+- **Textual (Standard Release)** - Primary release build (recommended for development)
+- **Textual (Debug)** - Debug configuration
+- **Textual (Standard Release Sandboxed)** - Sandboxed release build
+- **Textual (App Store)** - App Store distribution build
+- **Build Frameworks** - Builds all framework dependencies
+- Various XPC Services and Extensions (see workspace listing)
+
+### Build Commands
+
+#### Standard Development Build
+```bash
+xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Standard Release)" -configuration Release clean build
+```
+
+#### Debug Build
+```bash
+xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Debug)" -configuration Debug clean build
+```
+
+#### Build All Frameworks First (if needed)
+```bash
+xcodebuild -workspace Textual.xcworkspace -scheme "Build Frameworks" clean build
+```
+
+### Security Considerations for Claude Code
+- **Code Signing**: Never modify code signing settings programmatically
+- **Submodules**: Initialized and managed through git commands only
+- **Build Artifacts**: Generated files are excluded from repository
+- **Sensitive Data**: No API keys, certificates, or credentials should be handled by Claude
+- **Repository Scope**: Operations limited to MillerBOSS/EyeAreSea repository only
+
+### Project Structure for Claude Operations
+When making changes, Claude should focus on:
+- `Sources/App/Classes/` - Main application logic
+- `Sources/Shared/` - Shared components
+- `Configurations/Build/` - Build configuration (with extreme caution)
+- Documentation files (*.md)
+- GitHub Actions workflows (`.github/workflows/`)
+
+### Testing and Validation
+After any code changes:
+1. Run clean build with Standard Release scheme
+2. Verify no build errors or warnings introduced
+3. Check that all submodules remain properly initialized
+4. Ensure no sensitive files are staged for commit
