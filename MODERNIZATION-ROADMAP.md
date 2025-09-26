@@ -10,7 +10,8 @@
 ### **Original Textual Specifications:**
 - **Last Supported**: macOS High Sierra (10.13) minimum
 - **Xcode Requirement**: Xcode 10.0+ (Swift 4.2)
-- **Development Status**: Archived 2025-09-23, no longer maintained
+- **Development Status**: Active until Sept 2024, archived Sept 2025
+- **Last Commits**: September 8, 2024 (recent deprecation fixes)
 - **License**: BSD-style (allows forking with attribution)
 - **Architecture**: Main app + XPC services + Extensions
 
