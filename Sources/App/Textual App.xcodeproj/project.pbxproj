@@ -4153,7 +4153,6 @@
 						};
 					};
 					4C5BA37216F1302F00A96CA2 = {
-						DevelopmentTeam = 8482Q6EPL6;
 						DevelopmentTeamName = "Codeux Software, LLC";
 						LastSwiftMigration = 1100;
 						ProvisioningStyle = Manual;
@@ -5508,12 +5507,14 @@
 		4C5BA4E216F1302F00A96CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 			};
 			name = Debug;
 		};
 		4C5BA4E316F1302F00A96CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 			};
 			name = Release;
 		};

@@ -133,20 +133,45 @@ After any code changes:
 3. Check that all submodules remain properly initialized
 4. Ensure no sensitive files are staged for commit
 
-### Build Without Apple Developer Certificate
-For development builds without code signing:
+### Development vs Production Environments
+
+**IMPORTANT**: Use the environment setup script for proper builds:
+
+#### Development Environment (Recommended)
 ```bash
-xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Standard Release)" -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build
+# Switch to development environment (no Apple Developer cert required)
+./dev-setup.sh dev
+
+# Now build in Xcode GUI or CLI
+xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Standard Release)" -configuration Release clean build
+```
+
+#### Production Environment (Distribution only)
+```bash
+# Switch to production environment (requires Apple Developer cert)
+./dev-setup.sh prod
+```
+
+#### Check Current Environment
+```bash
+./dev-setup.sh status
 ```
 
 **Verified Build Results (2025-09-25):**
 - ✅ Universal binary (x86_64 + arm64)
 - ✅ Complete app bundle with frameworks and XPC services
 - ✅ All submodules properly integrated
-- ✅ No compilation errors
+- ✅ No compilation errors in development environment
+- ✅ Works in both Xcode GUI and CLI
 - ✅ Build artifacts in: `Build Results/Release/Textual.app`
 
-**System Requirements Confirmed:**
+**Privacy & Anonymity Confirmed:**
+- Git identity set to: MillerBOSS <MillerBOSS@users.noreply.github.com>
+- No personal Apple Developer info leaked to repository
+- Development builds work without any Apple Developer account
+
+**System Requirements:**
 - macOS with Xcode 26.0.1+
 - Git with submodule support
 - No Apple Developer certificate required for development builds
+- See BUILD-AND-TEST-GUIDE.md for detailed instructions

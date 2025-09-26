@@ -1,0 +1,13 @@
+// Production Code Signing Identity - For Distribution Builds
+// Requires valid Apple Developer Certificate
+
+CODE_SIGN_IDENTITY = Mac Developer
+
+// Production team settings (will need to be configured for actual distribution)
+DEVELOPMENT_TEAM = 8482Q6EPL6
+PROVISIONING_PROFILE_SPECIFIER = 8482Q6EPL6/
+
+// Require proper code signing for distribution
+CODE_SIGNING_REQUIRED = YES
+CODE_SIGNING_ALLOWED = YES
+AD_HOC_CODE_SIGNING_ALLOWED = NO
