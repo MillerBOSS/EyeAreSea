@@ -174,4 +174,20 @@ xcodebuild -workspace Textual.xcworkspace -scheme "Textual (Standard Release)" -
 - macOS with Xcode 26.0.1+
 - Git with submodule support
 - No Apple Developer certificate required for development builds
-- See BUILD-AND-TEST-GUIDE.md for detailed instructions
+
+## 📚 **Additional Documentation**
+
+Comprehensive project documentation is organized in the `docs/` folder:
+
+### **Essential References:**
+- **[docs/BUILD-AND-TEST-GUIDE.md](docs/BUILD-AND-TEST-GUIDE.md)** - Complete build procedures and testing workflows
+- **[docs/MODERNIZATION-ROADMAP.md](docs/MODERNIZATION-ROADMAP.md)** - 4-phase plan for macOS 26 compatibility
+- **[docs/BUILD-ISSUES-ANALYSIS.md](docs/BUILD-ISSUES-ANALYSIS.md)** - Analysis of all 119 build warnings
+- **[docs/CRITICAL-ISSUES.md](docs/CRITICAL-ISSUES.md)** - Known issues and troubleshooting
+
+### **Project Planning:**
+- **[docs/FEATURE-REQUESTS.md](docs/FEATURE-REQUESTS.md)** - Planned UI/UX enhancements
+- **[docs/MAC-APP-STORE-LICENSING.md](docs/MAC-APP-STORE-LICENSING.md)** - Legal requirements for distribution
+- **[docs/CLAUDE-WORKFLOW-CHECKLIST.md](docs/CLAUDE-WORKFLOW-CHECKLIST.md)** - Task completion systematic process
+
+See **[docs/README.md](docs/README.md)** for complete documentation index.
