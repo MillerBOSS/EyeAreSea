@@ -1,0 +1,109 @@
+name: Modernization Task
+description: Technical modernization tasks for macOS 26 compatibility
+title: "[Modernization]: "
+labels: ["modernization", "technical-debt", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for API modernization, deprecation fixes, and technical debt related to macOS compatibility.
+
+  - type: textarea
+    id: task-description
+    attributes:
+      label: Modernization task
+      description: What needs to be modernized or updated?
+      placeholder: Clear description of the API, framework, or code that needs updating.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modernization-type
+    attributes:
+      label: Type of modernization
+      options:
+        - API Deprecation - Replace deprecated macOS APIs
+        - Framework Migration - Move to modern frameworks
+        - Build System - Xcode, schemes, configurations
+        - SSL/TLS - Security and encryption updates
+        - Memory Management - ARC, weak references
+        - Threading - GCD, async/await adoption
+        - UI - AppKit modernization
+        - Performance - Optimization and efficiency
+    validations:
+      required: true
+
+  - type: dropdown
+    id: macos-version
+    attributes:
+      label: Target macOS version
+      description: Which macOS version introduced the modern replacement?
+      options:
+        - macOS 12.0 Monterey
+        - macOS 13.0 Ventura
+        - macOS 14.0 Sonoma
+        - macOS 15.0 Sequoia
+        - macOS 26.0 (upcoming)
+        - Not version specific
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency level
+      options:
+        - Low - Will be deprecated in future macOS
+        - Medium - Deprecated but still functional
+        - High - Deprecated with warnings in current macOS
+        - Critical - Broken or will break in macOS 26
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-implementation
+    attributes:
+      label: Current implementation
+      description: What APIs/code currently handle this functionality?
+      placeholder: |
+        - Files affected:
+        - Current APIs used:
+        - Dependencies involved:
+      render: markdown
+
+  - type: textarea
+    id: proposed-replacement
+    attributes:
+      label: Proposed modern replacement
+      description: What should replace the current implementation?
+      placeholder: |
+        - New APIs to use:
+        - Framework changes:
+        - Migration strategy:
+      render: markdown
+
+  - type: textarea
+    id: compatibility-concerns
+    attributes:
+      label: Backward compatibility
+      description: Are there any concerns about maintaining compatibility with older macOS versions?
+
+  - type: textarea
+    id: testing-requirements
+    attributes:
+      label: Testing requirements
+      description: How should this modernization be tested?
+      placeholder: |
+        - Functionality to verify:
+        - Test scenarios:
+        - macOS versions to test:
+
+  - type: textarea
+    id: documentation-links
+    attributes:
+      label: Documentation references
+      description: Links to Apple documentation, migration guides, or related resources
+      placeholder: |
+        - Apple Developer Documentation:
+        - WWDC session references:
+        - Related migration guides:

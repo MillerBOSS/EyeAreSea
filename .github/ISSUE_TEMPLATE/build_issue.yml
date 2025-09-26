@@ -1,0 +1,111 @@
+name: Build Issue
+description: Problems with building, compiling, or development environment setup
+title: "[Build]: "
+labels: ["build", "development", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for build failures, Xcode issues, code signing problems, or development environment setup issues.
+
+  - type: dropdown
+    id: build-type
+    attributes:
+      label: Type of build issue
+      options:
+        - Compilation Errors - Code won't compile
+        - Linking Errors - Framework or library issues
+        - Code Signing - Certificate or signing problems
+        - Xcode Configuration - Project or scheme issues
+        - Dependencies - Submodules or external libraries
+        - Environment Setup - dev-setup.sh or toolchain issues
+        - Warnings - Deprecation or compiler warnings
+        - Framework Embedding - Bundle structure problems
+    validations:
+      required: true
+
+  - type: dropdown
+    id: build-scheme
+    attributes:
+      label: Build scheme used
+      options:
+        - Textual (Debug)
+        - Textual (Standard Release)
+        - Textual (Standard Release Sandboxed)
+        - Textual (App Store)
+        - Build Frameworks
+        - Specific Extension or XPC Service
+        - Other/Multiple
+    validations:
+      required: true
+
+  - type: textarea
+    id: build-command
+    attributes:
+      label: Build command or steps
+      description: How are you building the project?
+      placeholder: |
+        - Via Xcode GUI (Product → Build)
+        - Command line: xcodebuild -workspace...
+        - dev-setup.sh commands used
+        - Other build steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error output
+      description: Full error messages, warnings, or build output
+      placeholder: Copy and paste the complete error messages or build log output here
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment-details
+    attributes:
+      label: Development environment
+      description: Details about your build environment
+      placeholder: |
+        - macOS version:
+        - Xcode version:
+        - Command line tools version:
+        - Git submodules status:
+        - Development vs Production mode:
+        - Code signing certificates available:
+    validations:
+      required: true
+
+  - type: textarea
+    id: previous-success
+    attributes:
+      label: Previous build success
+      description: Did this build successfully before? What changed?
+      placeholder: |
+        - Last successful build date:
+        - Recent changes made:
+        - New software installed:
+
+  - type: textarea
+    id: workaround-attempted
+    attributes:
+      label: Troubleshooting attempted
+      description: What steps have you already tried?
+      placeholder: |
+        - Clean build attempted
+        - dev-setup.sh commands run
+        - Submodules reinitialized
+        - Xcode restart
+        - Other troubleshooting steps
+
+  - type: textarea
+    id: additional-files
+    attributes:
+      label: Additional build artifacts
+      description: Any additional logs, crash reports, or build artifacts that might help
+      placeholder: |
+        - Console.app logs
+        - Xcode build reports
+        - .tmp folder contents
+        - Other relevant files

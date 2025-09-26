@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussion Forum
+    url: https://github.com/MillerBOSS/EyeAreSea/discussions
+    about: Ask questions, share ideas, or discuss development
+  - name: 📚 Documentation
+    url: https://github.com/MillerBOSS/EyeAreSea/tree/master/.claude/docs
+    about: Read comprehensive project documentation
+  - name: 🏗️ Build Guide
+    url: https://github.com/MillerBOSS/EyeAreSea/blob/master/.claude/docs/BUILD-AND-TEST-GUIDE.md
+    about: Complete guide for building and testing EyeAreSea
+  - name: 🛣️ Modernization Roadmap
+    url: https://github.com/MillerBOSS/EyeAreSea/blob/master/.claude/docs/MODERNIZATION-ROADMAP.md
+    about: 4-phase plan for macOS 26 compatibility

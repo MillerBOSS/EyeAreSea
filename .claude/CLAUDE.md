@@ -77,6 +77,33 @@ The project uses an extensive .xcconfig system for build configuration:
 
 ## Claude Code Integration
 
+### 🚨 **CRITICAL: GitHub Identity Requirements**
+
+**MANDATORY CHECKS BEFORE ANY GITHUB OPERATIONS:**
+
+1. **ALWAYS verify GitHub identity is MillerBOSS before creating issues, PRs, or commits**
+2. **Run these commands BEFORE any GitHub operation:**
+   ```bash
+   # Verify correct account is active
+   gh auth status
+
+   # Confirm user identity
+   gh api user
+   ```
+3. **ONLY MillerBOSS identity is allowed - NEVER use personal accounts**
+4. **If wrong account is active, switch immediately:**
+   ```bash
+   gh auth switch --user MillerBOSS
+   ```
+
+**ANONYMITY PROTECTION:**
+- Repository operations must maintain complete anonymity
+- No personal developer information should appear in any GitHub activity
+- All commits, issues, and PRs must be attributed to MillerBOSS only
+
+**PREVENTION MEASURES:**
+Future Claude Code sessions MUST follow these identity verification steps or risk creating anonymity breaches that require complete cleanup and recreation of GitHub content.
+
 ### Required System Tools
 Claude Code requires these tools to work effectively with this project:
 
