@@ -7,6 +7,8 @@ This folder contains comprehensive documentation for the EyeAreSea project devel
 ### **🔧 Build & Development**
 - **[BUILD-AND-TEST-GUIDE.md](BUILD-AND-TEST-GUIDE.md)** - Complete build procedures and testing workflows
 - **[BUILD-ISSUES-ANALYSIS.md](BUILD-ISSUES-ANALYSIS.md)** - Detailed analysis of all 119 build warnings
+- **[BUILD-SCHEMES-REFERENCE.md](BUILD-SCHEMES-REFERENCE.md)** - Detailed scheme documentation and specifications
+- **[XCODE-PROJECT-AUDIT.md](XCODE-PROJECT-AUDIT.md)** - Complete Xcode project structure analysis and framework issues
 - **[CLAUDE-WORKFLOW-CHECKLIST.md](CLAUDE-WORKFLOW-CHECKLIST.md)** - Systematic task completion checklist
 
 ### **🗺️ Project Planning**
